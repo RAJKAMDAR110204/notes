@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="username" required />
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="password" required />
+        
+        <button type="button" onClick="validate()">Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Validate the username and password
+            if (username === 'raj' && password === "123") {
+                alert("Successful Login");
+            } else {
+                alert("Unsuccessful Login");
+            }
+        }
+    </script>
+</body>
+</html>

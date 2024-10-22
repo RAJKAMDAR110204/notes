@@ -1,0 +1,234 @@
+<!-- RAJ KAMDAR  Roll No:12 TY6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Selectors */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Responsive Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+        }
+
+        /* Transition, Transformation, and Animation */
+        .transform-box {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            transition: transform 0.5s ease;
+        }
+
+        .transform-box:hover {
+            transform: rotate(45deg);
+        }
+
+        @keyframes animate-box {
+            0% {background-color: lightblue;}
+            50% {background-color: lightcoral;}
+            100% {background-color: lightblue;}
+        }
+
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: lightblue;
+            animation: animate-box 5s infinite;
+        }
+
+        /* List */
+        ul {
+            list-style-type: circle;
+            margin: 20px;
+        }
+
+        /* Registration Form */
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Canvas Styling */
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>RAJ KAMDAR Roll No : 12 TY6</h2>
+    <h1>Responsive Webpage Example</h1>
+</header>
+
+<!-- Descriptive Table -->
+<section>
+    <h2>Descriptive Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table</td>
+                <td>Displays data in rows and columns</td>
+            </tr>
+            <tr>
+                <td>List</td>
+                <td>Organizes items in an ordered or unordered format</td>
+            </tr>
+            <tr>
+                <td>Form</td>
+                <td>Collects user input data</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- CSS Transition, Transformation, Animation -->
+<section>
+    <h2>Transition, Transformation & Animation</h2>
+    <div class="transform-box">Hover Me</div>
+    <div class="animation-box">Animating</div>
+</section>
+
+<!-- Audio -->
+<section>
+    <h2>Audio Example</h2>
+    <audio controls>
+        <source src="audio_sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</section>
+
+<!-- Image -->
+<section>
+    <h2>Image Example</h2>
+    <img src="./Microprocessor.jpg" alt="Sample Image" width="300">
+</section>
+
+<!-- List -->
+<section>
+    <h2>List Example</h2>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+</section>
+
+<!-- Canvas -->
+<section>
+    <h2>Canvas Example</h2>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</section>
+
+<!-- Registration Form -->
+<section>
+    <h2>Registration Form</h2>
+    <div class="form-container">
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+           
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+           
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+           
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Contact: 8779539293</p>
+</footer>
+
+<script>
+    // JavaScript for form validation
+    function validateForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (name === "" || email === "" || password === "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        return true;
+    }
+
+    // Drawing on Canvas
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 50, 200, 100);
+</script>
+
+</body>
+</html>
