@@ -1,0 +1,45 @@
+.nav{
+    background-color: #333;
+    color:white;
+    justify-content: space-between;
+    display: flex;
+    height:50px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+      
+    
+}
+table{
+    border:2px solid black;
+    height:100px;
+    width:200px;
+    align-items: center;
+}
+th,td,tr{
+border:2px solid black;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    border:2px solid black;
+    background-color: red;
+    transition: 2s;
+    animation:animate 5s infinite;
+}
+
+.box:hover{
+    transform: rotate(90deg);
+    transform:translateX(100px)
+}
+
+@keyframes animate{
+    from{
+    background-color:red;
+    }
+    to{
+        background-color: blue;
+    }
+}
+
